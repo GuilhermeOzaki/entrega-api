@@ -1,0 +1,40 @@
+spring:
+  application:
+    name: entrega-api
+  jackson:
+    default-property-inclusion: non_null
+
+server:
+  port: 8080
+
+springdoc:
+  swagger-ui:
+    path: /docs
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+entrega:
+  tarifa:
+    taxa-base: 3.99
+    valor-por-km: 1.20
+    raio-incluido-km: 1.0
+    distancia-maxima-km: 15.0
+    adicional-longa-distancia: 2.50
+    limiar-longa-distancia-km: 8.0
+    adicional-pedido-pequeno: 3.00
+    limiar-pedido-pequeno: 20.00
+    limiar-entrega-gratuita: 60.00
+    taxa-maxima: 24.90
+    multiplicador-pico: 1.30
+    multiplicador-chuva: 1.20
+  tempo:
+    velocidade-media-km-h: 26.0
+    velocidade-pico-km-h: 18.0
+    minutos-coleta: 6
+    minutos-entrega: 4
+    minutos-adicionais-chuva: 8
+    margem-janela: 0.20
